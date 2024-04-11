@@ -5,13 +5,30 @@
   </head>
   <body>
     <h1>Welcome to Our Web Project</h1>
+
     <p>This is a collaborative project by <h1>King Seb</h1> and <b>Dishaan</b>.</p>
-    <h2>Lorem, ipsum dolor.</h2>
-    <h1>
+    <select name="Seb" id="selectOption">
+      <option value="0">Select an Option</option>
+      <option value="1">Option 1</option>
+      <option value="2">Option 2</option>
+      <option value="3">Option 3</option>
+    </select>
+
+    <p>
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta incidunt
       magnam non nostrum dolorem possimus suscipit culpa atque! Deleniti,
       perspiciatis.
-    </h1>
+    </p>
     <a href="about.html">About Us</a> | <a href="contact.html">Contact Us</a>
+    <script>
+      document.getElementById("selectOption").onchange = function() {
+        var x = this.value;
+        if (x == "1") {
+          window.location.href = "http://www.google.com";
+        } else if (x == "2") {
+          window.alert("You selected option two\n\nLorem Ipsum is simply dummy text of the printing and typesetting");
+        }
+      }
+    </script>
   </body>
 </html>
